@@ -1,0 +1,104 @@
+
+<div class="container mt-5 mb-5">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center pb-4"> Our events </h2>
+            <div class="bg-white p-3 rounded mt-2">
+
+
+               
+ <!-- ---------------------------Event 2---------------------------------------- -->  
+ <br> <br>             
+ <div class="row">
+
+    <div class="col-md-5">
+        <div class="d-flex flex-column justify-content-center align-items-center icon-container bg-success text-white mb-2"><i class="fa fa-flask fa-5x mb-3 mt-5"></i><span class="mb-4">Hands on Lab</span></div>
+    </div>
+
+    <div class="col-md-7 border-right">
+        <div class="listing-title">
+            <h5>Getting started with docker on linux for Azure</h5>
+        </div>
+        <div class="description">
+            <p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...<br></p>
+        </div> 
+    </div>
+
+</div> 
+               
+    <!-- ---------------------------Event 3---------------------------------------- -->   
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="d-flex flex-column justify-content-center align-items-center icon-container bg-success text-white mb-2"><i class="fa fa-flask fa-5x mb-3 mt-5"></i><span class="mb-4">Hands on Lab</span></div>
+        </div>
+    
+        <div class="col-md-7 border-right">
+            <div class="listing-title">
+                <h5>Getting started with docker on linux for Azure</h5>
+            </div>
+            <div class="description">
+                <p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...<br></p>
+            </div> 
+        </div>
+    
+    </div> 
+    
+
+
+      <!-- ---------------------------Event 3---------------------------------------- -->   
+                </div>
+            
+            </div>   
+       </div>  
+    
+    </div>
+       
+                            
+              
+    
+    <div>
+        <div>
+            <h2> Event name from database</h2>
+        
+            <div *ngFor="let event of events">
+               
+                {{event.event_name}}
+                
+              </div>
+        
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+        <div  *ngFor="let event of events" > 
+
+        <div class="col-md-5">
+            <div class="d-flex flex-column justify-content-center align-items-center icon-container bg-success text-white mb-2"><i class="fa fa-flask fa-5x mb-3 mt-5"></i><span class="mb-4">Hands on Lab</span></div>
+        </div>
+    
+        <div class="col-md-7 border-right">
+
+            <div class="listing-title">
+                <h5>   
+                     {{event.event_name}}  
+                </h5>
+            </div>
+            <div class="description">
+                <p>
+                    {{event.eventdescription}}   
+                </p>
+            </div> 
+            
+        </div>
+
+        </div>
+    
+    </div> 
+    

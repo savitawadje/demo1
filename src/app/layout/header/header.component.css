@@ -1,0 +1,87 @@
+@import "~font-awesome/css/font-awesome.css";
+
+
+.topbar
+{
+background: rgba(0, 0,0,0) linear-gradient(120deg, #4f4f4f 78%, #ed0009 22%) repeat scroll 0 0;
+padding: 5px 30px;
+height: 50px;
+}
+
+nav
+{
+  font-size: 15px;
+
+}
+
+
+.logo{
+  top: 28px;
+    height: 109px;
+    width: -15%;
+    position: relative;
+    z-index: 1;
+    background: border-box;
+    box-shadow: 10px10px 10px #000;
+    box-shadow: 0px 2px 3px #f1eded;
+}
+
+
+
+li a
+{
+  color: white;
+  padding: 0.5em 0.6em;
+}
+
+
+.sosial-link1 i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #1877F2;
+
+}
+
+.sosial-link2 i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #1da1f2;
+
+}
+
+.sosial-link3 i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #007bb5;
+
+}
+
+.sosial-link4 i.fa {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #c32aa3;
+
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+
+
+@media screen and (max-width: 992px)
+{
+  .topbar{
+    background:  #4f4f4f  !important;
+  }
+
+  }

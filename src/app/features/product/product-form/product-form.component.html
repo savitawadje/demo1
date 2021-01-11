@@ -1,0 +1,164 @@
+
+<div class="container">
+  <h2 class="heading "> OUR PRODUCT </h2>
+    <div class="row">
+
+      <div class="col-md-6" >
+       
+        <h3> Product Form </h3>
+      </div>
+      <div class="col-md-6" class="pl-4">  
+     </div>
+  
+    </div>
+
+
+    <br> <br>
+
+    <h4 class=" text-center"> Product Information </h4>
+    <p class="text-center"> PLease fill out your product information below</p>
+
+    <form >
+      <!-- [formGroup]="registerForm" (ngSubmit)="onSubmit() -->
+
+  <!-- ---------------------------------- Name ---------------------------------------- -->
+  <div class="form-group row">
+
+      <label class="col-md-12 control-label" > Product Name </label>
+
+      <div class="col-md-6">
+        <input  type="text"  formControlName="productName" class="form-control"   >
+        <div *ngIf="submitted && f.productName.errors" class="invalid-feedback">
+            <div *ngIf="f.productName.errors.required"> Product Name is required</div>
+        </div>
+      </div> 
+    </div>
+<!-- ---------------------------------- Description ---------------------------------------- -->
+
+
+   
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Description </label>
+
+  <div class="col-md-6">
+    <textarea type="text"  formControlName="description" class="form-control"   >
+    </textarea>
+      <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+        <div *ngIf="f.description.errors.required">  Description is required</div>
+    </div>
+  </div> 
+</div>
+    <!-- ---------------------------------- Quantity ---------------------------------------- -->
+
+   
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Quantity </label>
+
+  <div class="col-md-6">
+    <input type="number"  formControlName="quantity" class="form-control"  >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }" -->
+    
+      <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+        <div *ngIf="f.quantity.errors.required">  quantity is required</div>
+       
+    </div>
+  </div> 
+</div>
+
+
+<!-- ----------------------------------  waranty  ---------------------------------------- -->
+       
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Waranty </label>
+
+  <div class="col-md-6">
+    <input type="number"  formControlName="waranty" class="form-control"   >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.waranty.errors }" -->
+   
+      <div *ngIf="submitted && f.waranty.errors" class="invalid-feedback">
+        <div *ngIf="f.waranty.errors.required">  waranty is required</div>
+        <!-- <div *ngIf="f.quantity.number.invalid">  only number allowed </div> -->
+    </div>
+  </div> 
+</div>
+
+
+<!-- ----------------------------------  Price ---------------------------------------- -->
+           
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Price </label>
+
+  <div class="col-md-6">
+    <input type="number"  formControlName="price" class="form-control" >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.price.errors }"  -->
+    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+      <div *ngIf="f.price.errors.required">  price is required</div>
+      <!-- <div *ngIf="f.price.errors.number">  only number allowed </div> -->
+    </div>
+  </div> 
+</div>
+
+  
+<!-- ----------------------------------  Discount---------------------------------------- -->
+           
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Discount </label>
+
+  <div class="col-md-6">
+    <input type="number"  formControlName="discount" class="form-control" >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.discount.errors }"  -->
+      <div *ngIf="submitted && f.discount.errors" class="invalid-feedback">
+        <div *ngIf="f.discount.errors.required">  discount is required</div>
+        <!-- <div *ngIf="f.discount.number.invalid">  only number allowed </div> -->
+    </div>
+  </div> 
+</div>
+<!-- ---------------------------------- Offer ---------------------------------------- -->
+           
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > offer </label>
+
+  <div class="col-md-6">
+    <input type="number"  formControlName="offer" class="form-control" >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.offer.errors }"  -->
+      <div *ngIf="submitted && f.offer.errors" class="invalid-feedback">
+        <div *ngIf="f.offer.errors.required">  offer is required</div>
+        <!-- <div *ngIf="f.offer.number.invalid">  only number allowed </div> -->
+    </div>
+  </div> 
+</div>
+
+<!-- ---------------------------------- Images---------------------------------------- -->
+
+   
+<div class="form-group row">
+
+  <label class="col-md-12 control-label" > Choose File </label>
+
+  <div class="col-md-6">
+    <input type='file' (change)="onSelectFile($event)" multiple formControlName="file" class="form-control" >
+    <!-- [ngClass]="{ 'is-invalid': submitted && f.file.errors }"  -->
+    <div *ngIf="submitted && f.file.errors" class="invalid-feedback">
+        <div *ngIf="f.file.errors.required">Images are required</div>
+        
+    </div>
+  </div> 
+</div>
+  <!-- ---------------------------------- Submit---------------------------------------- -->
+      <button type="submit" class="btn btn-success text-center "  >
+        Submit
+      </button>
+      &nbsp;
+      <button type="reset" class="btn btn-danger text-center "   type="reset" (click)="onReset()" >
+        Cancel
+      </button>
+    
+  </form>
+
+</div>

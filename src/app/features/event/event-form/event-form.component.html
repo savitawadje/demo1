@@ -1,0 +1,117 @@
+
+<div class="container pt-4">
+    <h2 class="heading text-center"> OUR EVENT </h2>
+    <div class="row">
+
+      <div class="col-md-6" >
+      
+        <h3> Event Form </h3>
+      </div>
+      <div class="col-md-6" class="pl-4">  
+     </div>
+  
+    </div>
+
+
+    <br> <br>
+
+    <h4 class=" text-center"> Event Information </h4>
+    <p class="text-center"> PLease fill out your event information below</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  >
+
+  <!-- ---------------------------------- Name ---------------------------------------- -->
+    <div class="form-group row">
+
+      <label class="col-md-12 control-label" > Event Name </label>
+
+      <div class="col-md-6">
+        <input  type="number"  formControlName="eventName" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.eventName.errors }" >
+        <div *ngIf="submitted && f.eventName.errors" class="invalid-feedback">
+            <div *ngIf="f.eventName.errors.required">Event Name is required</div>
+            <div *ngIf="f.eventName.errors.pattern"> only numbers allowed</div>  
+        </div>
+        
+      </div> 
+    </div>
+
+<!-- ---------------------------------- Description ---------------------------------------- -->
+
+
+<div class="form-group row">
+
+    <label class="col-md-12 control-label" > Description </label>
+
+    <div class="col-md-6">
+      <textarea type="text"  formControlName="description" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.description.errors }" >
+      </textarea>
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+          <div *ngIf="f.description.errors.required">  Description is required</div>
+      </div>
+    </div> 
+  </div>
+
+<!-- ---------------------------------- Images---------------------------------------- -->
+
+<div class="form-group row">
+
+    <label class="col-md-12 control-label" > Choose File </label>
+
+    <div class="col-md-6">
+      <input type='file' (change)="onSelectFile($event)" multiple formControlName="file" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.file.errors }" >
+      <div *ngIf="submitted && f.file.errors" class="invalid-feedback">
+          <div *ngIf="f.file.errors.required">Images are required</div>
+      </div>
+    </div> 
+  </div>
+
+    
+      <br>
+    <br> <br>
+  <!-- ---------------------------------- Submit---------------------------------------- -->
+      <button type="submit" class="btn btn-success text-center "  >
+        Submit
+        <!-- [disabled]="!demo.valid" -->
+      </button>
+      &nbsp;
+      <button  class="btn btn-danger text-center "  type="reset" (click)="onReset()" >
+        Cancel
+      </button>
+    
+  </form>
+
+</div>
+
+
+ <!-- -------------------------------------------------
+  Event Management -------------------------------------------------------------- -->
+
+<table>
+  <h2>  Event management </h2>
+
+  <tr> 
+    <th> Index</th>
+    <th> Event Name</th>
+     <th> Event description </th>
+     <th> Action </th>
+  </tr>
+  
+<!-- 
+  <tr  *ngFor="let event of events">
+
+    <td>  No </td>
+    <td>   {{event.event_name}}  </td>
+    <td>  {{event.eventdescription}}    </td>
+
+    <td>
+      <button class="btn btn-primary btn-sm"> Update </button>
+      &nbsp;
+      <button class="btn btn-danger btn-sm" (click)="onDelete()"> Delete </button>
+    </td>
+
+  </tr> -->
+
+
+
+ 
+</table>

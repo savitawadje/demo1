@@ -1,0 +1,43 @@
+
+
+
+<div class="contact-clean">
+    <form   [formGroup]="ContactForm" (ngSubmit)="onSubmit()" >
+
+        <h2 class="text-center"> Contact us</h2>
+
+        <div class="form-group">
+            <input class="form-control"   formControlName="ConName" type="text"  placeholder="Name"  [ngClass]="{ 'is-invalid':  f.ConName.errors }" sytle="border-color: blue !important;">
+            <div *ngIf=" f.ConName.errors  && f.ConName.touched " class="invalid-feedback">
+                <div *ngIf="f.ConName.errors.required">  Name is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control"  formControlName="email"  type="email" name="email" placeholder="Email"   [ngClass]="{ 'is-invalid':  f.email.errors }">
+            
+            <div *ngIf=" f.email.errors  &&  f.email.touched " class="invalid-feedback">
+                <div *ngIf="f.email.errors.required"> email is required</div>
+                <div *ngIf="f.email.errors.email"> email is invalid</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control"  formControlName="msg"  name="message" placeholder="Message" rows="14"  [ngClass]="{ 'is-invalid':  f.msg.errors }">
+           </textarea>
+
+           <div *ngIf=" f.msg.errors && f.msg.touched " class="invalid-feedback">
+            <div *ngIf="f.msg.errors.required "> Please type message here </div>
+           </div>
+
+        </div>
+
+        <div class="form-group">
+
+              <button type="submit" onclick="submit()"  class="btn btn-success" >Send Message</button>
+           
+         </div>
+
+    </form>
+  </div>
+  

@@ -1,0 +1,30 @@
+body {
+    background-color: #f6f7f9
+  }
+  
+  .custom-badge {
+    background-color: #343a40 !important;
+    color: #fff;
+    font-size: 11px;
+    padding: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 7px
+  }
+  
+  .card {
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px #dcd8d8;
+  }
+  
+  .card img
+  {
+    height: auto;
+    width: 100%;
+  }
+  .time i {
+    color: #cacacaa3
+  }
+  
